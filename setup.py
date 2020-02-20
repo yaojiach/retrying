@@ -20,12 +20,9 @@ CLASSIFIERS = [
     'Natural Language :: English',
     'License :: OSI Approved :: Apache Software License',
     'Programming Language :: Python',
-    'Programming Language :: Python :: 2.6',
-    'Programming Language :: Python :: 2.7',
-    'Programming Language :: Python :: 3.2',
-    'Programming Language :: Python :: 3.3',
-    'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
     'Topic :: Internet',
     'Topic :: Utilities',
 ]
@@ -35,9 +32,6 @@ with open('README.rst') as file_readme:
 
 with open('HISTORY.rst') as file_history:
     history = file_history.read()
-
-with open('requirements.txt') as file_requirements:
-    requirements = file_requirements.read().splitlines()
 
 settings.update(
     name='retrying',
@@ -50,9 +44,7 @@ settings.update(
     classifiers=CLASSIFIERS,
     keywords="decorator decorators retry retrying exception exponential backoff",
     py_modules= ['retrying'],
-    test_suite="test_retrying",
-    install_requires=requirements,
+    test_suite="test_retrying"
 )
-
 
 setup(**settings)
